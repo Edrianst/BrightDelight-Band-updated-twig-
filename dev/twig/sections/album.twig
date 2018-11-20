@@ -1,0 +1,31 @@
+<section class="section album" id="album">
+    <div class="container">
+        <div class="section__content section__content--album">
+            <div class="section__title section__title--album">
+                <h2>{{ data.albumTitle }}</h2>
+            </div>
+            <div class="album__top">
+                <img src="../../img/cover.jpg" alt="album" class="album__logo">
+                <div class="album__singles">
+                    <div class="single__header">{{ data.albimSingles }}</div>
+                    <div class="single">
+                        <div class="single__title">{{ data.singleOne }}</div>
+                        <audio src="../../audio/1.mp3" class="single__player" controls></audio>
+                    </div>
+                    <div class="single">
+                        <div class="single__title">{{ data.singleTwo }}</div>
+                        <audio src="../../audio/2.mp3" class="single__player" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="text">{{ data.albumBuy }}</div>
+            <div class="album__btns">
+                {% for item in data.stores %}
+                <a href="{{ item.link }}" class="buy__btn">
+                    <img src="../../img/{{ item.image }}" alt="iTunes" class="buy__pic">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

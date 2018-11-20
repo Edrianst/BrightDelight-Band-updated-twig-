@@ -1,0 +1,38 @@
+<section class="section shows" id="shows">
+    <div class="container">
+        <div class="section__content">
+            <div class="section__title">
+                <h2>{{ data.showsTitle }}</h2>
+            </div>
+            <div class="shows__list">
+                {% for item in data.shows %}
+                {% if item.status == true %}
+                <a href="{{ item.link }}" class="shows__link">
+                    <div class="shows__row">
+                        <div class="date">{{ item.date }}</div>
+                        <div class="event">{{ item.event }}</div>
+                        <div class="city">{{ item.city }}</div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="section__title">
+                <h2>{{ data.showsTitle_upcoming }}</h2>
+            </div>
+            <div class="shows__list">
+                {% for item in data.shows %}
+                    {% if item.status == false %}
+                        <a href="{{ item.link }}" class="shows__link">
+                            <div class="shows__row">
+                                <div class="date">{{ item.date }}</div>
+                                <div class="event">{{ item.event }}</div>
+                                <div class="city">{{ item.city }}</div>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="section gallery" id="media">
+    <div class="container">
+        <div class="section__content">
+            <div class="section__title">
+                <h2>{{ data.mediaTitle }}</h2>
+            </div>
+            <div class="gallery__content">
+                <div class="gallery__albums">
+                    {% for item in main.gallery %}
+                    <a href="#" class="album__wrapper">
+                        <div class="album__bg">
+                            <div class="album__title">{{ item.title }}</div>
+                            <div class="album__subtitle">{{ item.subtitle }}
+                                <span class="promo__place">{{ item.subtitleTwo }}</span>
+                            </div>
+                        </div>
+                        <img src="../../img/gallery/{{ item.poster }}" alt="" class="album__pic">
+                    </a>
+                    <div class="gallery__modal">
+                        <div class="gallery__wrapper">
+                            <div class="gallery__block">
+                                {% for slide in item.images %}
+                                <a href="../../img/gallery/{{ slide.image }}" class="gallery__link" data-fancybox="images">
+                                    <img src="../../img/gallery/{{ slide.image }}" alt="gallery" class="gallery__pic">
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

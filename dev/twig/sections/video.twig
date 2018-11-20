@@ -1,0 +1,17 @@
+<section class="section video">
+    <div class="container">
+        <div class="section__content">
+            <div class="section__title">
+                <h2>{{ data.videoTitle }}</h2>
+            </div>
+            <div class="video__wrapper">
+                <button type="button" class="play__btn" id="play-btn">{{ data.videoBtn }}</button>
+                <video class="video__front" autoplay="autoplay" id="video" loop muted>
+                    <source src="../../img/video/video.mp4" type="video/mp4">
+                </video>
+                <iframe class="iframe" id="frame" src="https://www.youtube.com/embed/ng07h-xhx-w" frameborder="0"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>

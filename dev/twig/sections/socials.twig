@@ -1,0 +1,32 @@
+<section class="section socials" id="social">
+    <div class="container">
+        <div class="section__content">
+            <div class="section__title">
+                <h2>{{ data.socialsTitle }}</h2>
+            </div>
+            <div class="content__block">
+                <div class="socials__mobile">
+                    {% for item in data.socials %}
+                        <a href="{{ item.link }}" class="social__link" target="_blank">
+                            <i class="{{ item.icon }}" aria-hidden="true"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="block__left">
+                    <div class="block__text">
+                        <h3>{{ data.socialsSubtitle }}</h3>
+                    </div>
+                    <div class="block__links">
+                        {% for item in data.socialPics %}
+                        <a href="{{ item.link }}" class="{{ item.class }}">
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="block__right">
+                    <img src="../../img/3.jpg" alt="photo" class="social__photo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

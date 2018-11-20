@@ -1,0 +1,99 @@
+.content__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    padding: 0 10%;
+    @include desktop {
+        height: auto;
+        flex-direction: column;
+    }
+    @include tablets {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.block__left {
+    flex: 0 0 48%;
+    height: 100%;
+    background-color: rgba(244, 240, 241, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include desktop {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
+}
+
+.block__text {
+    color: #000;
+    letter-spacing: 3px;
+    padding-bottom: rem(30px);
+}
+
+.socials__mobile {
+    display: none;
+    text-align: center;
+    margin-bottom: rem(10px);
+    .social__icon {
+        font-size: 36px;
+        @include phones {
+            font-size: 28px;
+        }
+    }
+    @include desktop {
+        display: block;
+    }
+}
+
+.block__right {
+    flex: 0 0 52%;
+    height: 100%;
+    overflow: hidden;
+    @include phones {
+        flex: 0 0 100%;
+    }
+}
+
+.social__photo {
+    max-width: 100%;
+    height: auto; // @include tablets {
+    //     height: auto;
+    // }
+}
+
+.big-link {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: url('../img/ikonki.png') center no-repeat;
+    transition: transform .3s ease;
+    margin-right: rem(5px);
+    @include phones {
+        width: 35px;
+        height: 35px;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        transform: translateY(-5px);
+    }
+    &--vk {
+        background-position: -273px -20px;
+    }
+    &--fb {
+        background-position: -25px -20px;
+    }
+    &--yt {
+        background-position: -435px -20px;
+    }
+    &--inst {
+        background-position: -518px -20px;
+    }
+}

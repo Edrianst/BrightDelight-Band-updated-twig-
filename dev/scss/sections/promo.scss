@@ -1,0 +1,50 @@
+.promo {
+    width: 100%;
+    background-color: #000;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.promo__text {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    @include phones {
+        font-size: 16px;
+    }
+}
+
+.promo__link {
+    text-decoration: none;
+}
+
+.promo__time {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.promo__place {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(230, 0, 0);
+    transition: .3s;
+    text-decoration: none;
+    &:hover {
+        color: rgb(167, 7, 7);
+    }
+}
+
+.promo__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    @include phones {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,12 @@
+<div class="ham__menu">
+    <a href="#" class="close-btn">
+        <i class="fa fa-times close-icon" aria-hidden="true"></i>
+    </a>
+    <ul class="menu__list">
+        {% for item in data.menu %}
+        <li class="menu__item">
+            <a href="{{ item.link }}" class="menu__link">{{item.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

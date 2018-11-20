@@ -1,0 +1,235 @@
+.section {
+    width: 100%;
+    margin: rem(50px) 0;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid $yellow;
+    border-radius: 3px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: .3s ease;
+    &:hover {
+        background-color: $yellow;
+        color: #000;
+    }
+    &--form {
+        position: initial;
+        bottom: initial;
+        left: initial;
+        transform: initial;
+        background: none;
+        margin: 20px auto;
+        margin-bottom: none;
+    }
+    &--modal {
+        background: $yellow;
+        color: #000;
+    }
+    &--promo {
+        position: initial;
+        left: initial;
+        top: initial;
+        transform: none;
+        margin: 0 10px;
+        @include phones {
+            margin: 10px 0;
+        }
+    }
+}
+
+.section__content {
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    padding: rem(30px) rem(10px);
+    &--album {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.section__title {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: rem(20px);
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #fff;
+    &--album {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        @include phones {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    z-index: 20;
+    @include phones {
+        display: block;
+    }
+}
+
+.ham__link {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: $yellow;
+    margin-bottom: 4px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ham__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; // transform: scale(0);
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--active {
+        height: 350px;
+    }
+}
+
+.close-btn {
+    display: block;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.close-icon {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.menu__list {
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+}
+
+.menu__item {
+    text-align: center;
+    padding: 20px 60px;
+    width: 100%;
+    &:hover {
+        background-color: $yellow;
+    }
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mobile-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url('../img/logo_b.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    @include tablets {
+        display: block;
+    }
+}
+
+.language__link {
+    display: inline-block;
+    font-size: 0;
+    margin: 0 10px;
+    margin-left: 20px;
+    &:last-child {
+        margin: 0;
+    }
+    &:first-child {
+        @include tablets {
+            margin-left: 0;
+        }
+    }
+    @include tablets {
+        margin-top: 5px;
+    }
+}
+
+.language__pic {
+    width: 25px;
+    height: 15px;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999;
+}
+
+.preloader__logo {
+    position: relative;
+    perspective: 300px;
+}
+
+.preloader__pic {
+    max-width: 150px;
+    animation: rotation 1s ease-in-out infinite;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotateY(360deg);
+    }
+}

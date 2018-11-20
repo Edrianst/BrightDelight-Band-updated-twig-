@@ -1,0 +1,78 @@
+.album__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: rem(10px) 0;
+    width: 100%;
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.album__logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.album__singles {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(10px);
+    width: 100%;
+}
+
+.single__header {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: rem(20px);
+}
+
+.single {
+    width: 100%;
+    text-align: center;
+}
+
+.single__title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: rem(10px);
+}
+
+.single__player {
+    width: 100%;
+    margin-bottom: rem(10px);
+    @include tablets {
+        width: 50%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}
+
+.buy__pic {
+    width: 130px;
+    height: 40px;
+}
+
+.text {
+    letter-spacing: 3px;
+    margin: rem(10px) 0;
+    font-weight: bold;
+}
+
+.album__btns {
+    text-align: center;
+}
+
+.buy__btn {
+    display: inline-block;
+    margin: 0 rem(15px);
+}

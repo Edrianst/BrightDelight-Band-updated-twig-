@@ -1,0 +1,61 @@
+.video__wrapper {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    border: 20px solid rgba(244, 240, 241, .6);
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+    @include desktop {
+        height: 460px;
+    }
+    @include phones {
+        border: 10px solid rgba(244, 240, 241, .6);
+        height: 200px;
+    }
+}
+
+.video__front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include tablets {
+        display: none;
+    }
+}
+
+.play__btn {
+    z-index: 5;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 70px;
+    border: 2px solid $yellow;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: $yellow;
+    text-transform: uppercase;
+    @include tablets {
+        display: none;
+    }
+}
+
+.iframe {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include tablets {
+        display: block;
+    }
+}
