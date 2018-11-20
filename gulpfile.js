@@ -146,7 +146,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.dev + 'scss/**/*.scss', gulp.series('styles'));
     gulp.watch(paths.dev + 'js/*.js', gulp.series('scripts'));
     gulp.watch(paths.dev + '*.html', gulp.series('htmls'));
-    gulp.watch(paths.dev + 'twig/*.twig', gulp.series('twig'));
+    gulp.watch(paths.dev + 'twig/**/*.*', gulp.series('twig'));
     gulp.watch(paths.dev + 'img/**/*.*', gulp.series('images'));
     gulp.watch(paths.dev + 'fonts/**/*.*', gulp.series('fonts'));
     gulp.watch(paths.dev + 'plugins/**/*.*', gulp.series('plugins'));
