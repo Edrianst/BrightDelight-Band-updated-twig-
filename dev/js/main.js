@@ -74,10 +74,42 @@ $(function () {
     })
 })
 
+
+
+const drawText = (strings) => {
+    const text = document.querySelector('.preloader__text');
+    let i = 0;
+
+     function recurse(index) {
+
+        const interval = setInterval(function () {
+            text.innerHTML += strings[index][i];
+            i++;
+
+            if (i >= strings[index].length) {
+                window.clearInterval(interval);
+                i = 0;
+
+                index = index == 1 ? 0 : 1;
+
+                setTimeout(function () {
+                    text.innerHTML = '';
+                    recurse(index);
+                }, 2000)
+            }
+
+        }, 50);
+    }
+
+    recurse(0);
+}
+
+drawText(['Загрузка ...', 'Loading ...']);
+
 $(window).on('load', function () {
     setTimeout(() => {
         $('.preloader').fadeOut(1000);
-    }, 1000);
+    }, 100);
 
 })
 
@@ -109,5 +141,3 @@ $(function () {
         }
     });
 })
-
-$(document).addClass('first');

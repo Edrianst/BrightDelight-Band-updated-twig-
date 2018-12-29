@@ -51,6 +51,7 @@
         top: initial;
         transform: none;
         margin: 0 10px;
+        width: 200px;
         @include phones {
             margin: 10px 0;
         }
@@ -226,6 +227,12 @@
 
 .overflow {
     overflow: hidden;
+}
+
+.preloader__text {
+    color: $yellow;
+    text-align: center;
+    margin-top: 20px;
 }
 
 @keyframes rotation {
