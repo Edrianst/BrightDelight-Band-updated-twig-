@@ -2,41 +2,41 @@
     <div class="header__top">
         <div class="container header__container">
             <a href="index.html" class="logo">
-                <img src="../../img/logo2.png" alt="logo" class="logo__pic">
-            </a>
-            <nav class="navigation">
-                <ul class="nav__list" id="menu">
-                    {%  for item in data.menu %}
-                    <li class="nav__item">
-                        <a href="{{ item.link }}" class="nav__link">{{item.title}}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-            <div class="header__right">
-                <div class="social-btns">
-                    {% for item in data.socials %}
-                    <a href="{{ item.link }}" class="social__link" target="_blank">
-                        <i class="{{ item.icon }}" aria-hidden="true"></i>
-                    </a>
-                    {% endfor %}
+                <img alt="logo" class="logo__pic" src="../../img/logo2.png"></a>
+                <nav class="navigation">
+                    <ul class="nav__list" id="menu">
+                        {%  for item in data.menu %}
+                            <li class="nav__item">
+                                <a href="{{ item.link }}" class="nav__link">
+                                    {{item.title}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <div class="social-btns">
+                        {% for item in data.socials %}
+                            <a href="{{ item.link }}" class="social__link" target="_blank">
+                                <i class="{{ item.icon }}" aria-hidden="true"></i>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <div class="language">
+                        <a href="../ru/" class="language__link">
+                            <img alt="" class="language__pic" src="../../img/russia.png"></a>
+                            <a href="../en/" class="language__link">
+                                <img alt="" class="language__pic" src="../../img/uk.png"></a>
+                            </div>
+                            <div class="hamburger">
+                                <div class="ham__link"></div>
+                                <div class="ham__link"></div>
+                                <div class="ham__link"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="language">
-                    <a href="../ru/" class="language__link">
-                        <img src="../../img/russia.png" alt="" class="language__pic">
-                    </a>
-                    <a href="../en/" class="language__link">
-                        <img src="../../img/uk.png" alt="" class="language__pic">
-                    </a>
-                </div>
-                <div class="hamburger">
-                    <div class="ham__link"></div>
-                    <div class="ham__link"></div>
-                    <div class="ham__link"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="../../img/logo.png" alt="logo-big" class="logo__big">
-    <a href="#album" class="btn">{{ data.headerOrder }}</a>
-</header>
+                {# <img src="../../img/logo.png" alt="logo-big" class="logo__big"> #}
+                <a href="#album" class="btn">
+                    {{ data.headerOrder }}</a>
+            </header>
+        

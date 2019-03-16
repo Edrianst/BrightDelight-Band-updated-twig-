@@ -102,64 +102,85 @@ module.exports = {
             status: true
         },
         {
+            link: 'https://vk.com/mad_break',
+            date: 'Feb 03',
+            event: 'Mad Break',
+            city: 'Moscow',
+            status: true
+        },
+        {
+            link: 'https://vk.com/mskstationfest',
+            date: 'Feb 17',
+            event: 'Station Fest vol.2',
+            city: 'Moscow',
+            status: true
+        },
+        {
             link: 'https://vk.com/rockvibegeneration',
-            date: '24.02.2019',
+            date: 'Feb 24',
             event: 'ROCK VIBE GENERATION',
             city: 'Moscow',
-            status: false
+            status: true
+        },
+        {
+            link: 'https://vk.com/fallhascome_moscow',
+            date: 'Mar 10',
+            event: 'Fall Has Come/BrightDelight',
+            city: 'Moscow',
+            status: true
         },
         {
             link: 'https://vk.com/adept_spb19',
-            date: '30.03.2019',
+            date: 'Mar 30',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'St.Petersburg',
             status: false
         },
         {
             link: 'https://vk.com/adept_krasnodar19',
-            date: '31.03.2019',
+            date: 'Mar 31',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'Krasnodar',
             status: false
         },
         {
             link: 'https://vk.com/adept_samara19',
-            date: '02.04.2019',
+            date: 'Apr 02',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'Samara',
             status: false
         },
         {
             link: 'https://vk.com/adept_nn',
-            date: '04.04.2019',
+            date: 'Apr 04',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'N. Novgorod',
             status: false
         },
         {
             link: 'https://vk.com/adept_msk19',
-            date: '05.04.2019',
+            date: 'Apr 05',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'Moscow',
             status: false
         },
         {
             link: 'https://vk.com/adept_ekb19',
-            date: '06.04.2019',
+            date: 'Apr 06',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'Ekaterinburg',
             status: false
         },
         {
             link: 'https://vk.com/adept_novosib19',
-            date: '08.04.2019',
+            date: 'Apr 08',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'Novosibirsk',
             status: false
         },
         {
             link: 'https://vk.com/adept_krasnoyarsk19',
-            date: '09.04.2019',
+            date: 'Apr 09',
             event: 'Adept/Crystal Lake/BrightDelight<br>Russian Tour',
             city: 'Krasnoyarsk',
             status: false
