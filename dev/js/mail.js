@@ -20,7 +20,6 @@ var submitForm = function (ev) {
     });
 
     request.fail(function (jqXHR, textStatus) {
-        // alert("Request failed: " + textStatus);
         if(jqXHR.status == 200) {
             $.fancybox.open('<div id="hidden-form"><div class="modal__text">Ваше письмо было успешно отправлено</div><a href="#" data-fancybox-close class="btn btn--form btn--modal">Закрыть</a></div>');
             $('#form')[0].reset();

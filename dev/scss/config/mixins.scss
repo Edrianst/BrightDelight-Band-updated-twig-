@@ -9,6 +9,12 @@
     }
 }
 
+@mixin middle {
+    @media screen and (max-width: $middle) {
+        @content;
+    }
+}
+
 @mixin laptops {
     @media screen and (max-width: $laptops) {
         @content;

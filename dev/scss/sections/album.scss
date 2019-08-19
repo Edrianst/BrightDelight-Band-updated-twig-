@@ -1,19 +1,40 @@
 .album__top {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     margin: rem(10px) 0;
     width: 100%;
     @include tablets {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+    }
+}
+
+.album__item {
+    flex: 0 0 48%;
+    text-align: center;
+    @include tablets {
+        margin-bottom: 20px;
     }
 }
 
 .album__logo {
     max-width: 100%;
     height: auto;
+}
+
+.album__name {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.album__date {
+    color: rgb(230, 0, 0);
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .album__singles {

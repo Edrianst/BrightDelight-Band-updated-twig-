@@ -1,16 +1,47 @@
-<section class="section video">
+<section class="section section--animated video">
     <div class="container">
         <div class="section__content">
             <div class="section__title">
                 <h2>{{ data.videoTitle }}</h2>
             </div>
-            <div class="video__wrapper">
-                <button type="button" class="play__btn" id="play-btn">{{ data.videoBtn }}</button>
-                <video class="video__front" autoplay="autoplay" id="video" loop muted>
-                    <source src="../../img/video/video.mp4" type="video/mp4">
-                </video>
-                <iframe class="iframe" id="frame" src="https://www.youtube.com/embed/ng07h-xhx-w" frameborder="0"
-                        allowfullscreen></iframe>
+            {#<div class="video__wrapper">#}
+            {#<button type="button" class="play__btn" id="play-btn">{{ data.videoBtn }}</button>#}
+            {#<video class="video__front" autoplay="autoplay" id="video" loop muted>#}
+            {#<source src="../../img/video/video.mp4" type="video/mp4">#}
+            {#</video>#}
+            {#<iframe class="iframe" id="frame" src="https://www.youtube.com/embed/ng07h-xhx-w" frameborder="0"#}
+            {#allowfullscreen></iframe>#}
+            {#</div>#}
+            <div class="videos">
+                <div class="video__item">
+                    <div class="video__poster">
+                        <img src="../../img/drum.jpg" alt="" class="poster__pic">
+                        <a href="#" class="video__link">
+                            <i class="fa fa-play video__icon" aria-hidden="true"></i>
+                            <span class="video__title">
+                            {{ data.videoName }}
+                            </span>
+                        </a>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/q-p_qbRZavw" class="video__post" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video__item">
+                    <div class="video__poster">
+                        <img src="../../img/checkmate.jpg" alt="" class="poster__pic">
+                        <a href="#" class="video__link">
+                            <i class="fa fa-play video__icon" aria-hidden="true"></i>
+                            <span class="video__title">
+                            {{ data.videoName_1 }}
+                            </span>
+                        </a>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/QoM2CDus2Dc" class="video__post" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video__btn">
+                <a href="https://www.youtube.com/channel/UCKTdiF_eqod9NQf7pxK6A_Q" class="btn" target="_blank">{{ data.videoBtn }}</a>
             </div>
         </div>
     </div>

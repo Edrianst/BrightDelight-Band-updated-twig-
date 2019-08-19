@@ -3,6 +3,9 @@
     margin: rem(50px) 0;
     background-color: transparent;
     z-index: 10;
+    &--animated {
+        opacity: 0;
+    }
 }
 
 .container {
@@ -12,26 +15,38 @@
 }
 
 .btn {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
+    display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    border: 2px solid $yellow;
+    border: 1px solid #fff;
+    background: none;
     border-radius: 3px;
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
+    padding: 10px 40px;
     text-align: center;
     transition: .3s ease;
 
     &:hover {
-        background-color: $yellow;
-        color: #000;
+        //box-shadow: 0 0 10px 3px #ff7b1b;
+        color: rgba(0, 0, 0, .5);
+        background-color: #fff;
+    }
+
+    &--header {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        opacity: 0;
+        @include tablets {
+            position: initial;
+            //left: initial;
+            bottom: initial;
+            margin: 0 auto;
+            transform: none;
+        }
     }
 
     &--form {
@@ -55,11 +70,17 @@
         top: initial;
         transform: none;
         margin: 0 10px;
-        width: 200px;
+        width: 235px;
 
         @include phones {
             margin: 10px 0;
         }
+    }
+    &--album {
+        position: initial;
+        left: initial;
+        top: initial;
+        transform: none;
     }
 }
 
@@ -98,11 +119,12 @@
 .hamburger {
     display: none;
     position: fixed;
-    right: 20px;
-    top: 70px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 22px;
     z-index: 20;
 
-    @include phones {
+    @include laptops {
         display: block;
     }
 }
@@ -111,7 +133,7 @@
     display: block;
     width: 25px;
     height: 4px;
-    background-color: $yellow;
+    background-color: #00b8f9;
     margin-bottom: 4px;
 
     &:last-child {
@@ -128,13 +150,13 @@
     overflow: hidden;
     transition: .5s ease;
     z-index: 20;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &--active {
-        height: 350px;
+        height: 370px;
     }
 }
 
@@ -177,7 +199,7 @@
     top: 0;
     left: 0;
     position: fixed;
-    background-image: url('../img/logo_b.png');
+    background-image: url('../img/logo_b_cyan.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -255,5 +277,42 @@
 @keyframes rotation {
     to {
         transform: rotateY(360deg);
+    }
+}
+
+@keyframes blick {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: .3;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .3;
+    }
+
+    20% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    85% {
+        opacity: .3;
+    }
+    90% {
+        opacity: 0;
+    }
+    95% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 0;
     }
 }

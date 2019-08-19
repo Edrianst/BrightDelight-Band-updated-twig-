@@ -1,29 +1,29 @@
-<section class="section album" id="album">
+<section class="section section--animated album" id="album">
     <div class="container">
         <div class="section__content section__content--album">
             <div class="section__title section__title--album">
                 <h2>{{ data.albumTitle }}</h2>
             </div>
             <div class="album__top">
-                <img src="../../img/cover.jpg" alt="album" class="album__logo">
-                <div class="album__singles">
-                    <div class="single__header">{{ data.albimSingles }}</div>
-                    <div class="single">
-                        <div class="single__title">{{ data.singleOne }}</div>
-                        <audio src="../../audio/1.mp3" class="single__player" controls></audio>
-                    </div>
-                    <div class="single">
-                        <div class="single__title">{{ data.singleTwo }}</div>
-                        <audio src="../../audio/2.mp3" class="single__player" controls></audio>
-                    </div>
+                <div class="album__item">
+                    <img src="../../img/invoke.jpg" alt="album" class="album__logo">
+                    <div class="album__name">{{ data.albumName }}</div>
+                    <div class="album__date">{{ data.albumDate }}</div>
+                    <a href="https://fanlink.to/invoke" class="btn btn--album" target="_blank">{{ data.listenBtn }}</a>
+                </div>
+                <div class="album__item">
+                    <img src="../../img/cover.jpg" alt="album" class="album__logo">
+                    <div class="album__name">{{ data.albumName_1 }}</div>
+                    <div class="album__date">{{ data.albumDate_1 }}</div>
+                    <a href="https://fanlink.to/lmir" class="btn btn--album" target="_blank">{{ data.listenBtn }}</a>
                 </div>
             </div>
             <div class="text">{{ data.albumBuy }}</div>
             <div class="album__btns">
                 {% for item in data.stores %}
-                <a href="{{ item.link }}" class="buy__btn">
-                    <img src="../../img/{{ item.image }}" alt="iTunes" class="buy__pic">
-                </a>
+                    <a href="{{ item.link }}" class="buy__btn" target="_blank">
+                        <img src="../../img/{{ item.image }}" alt="iTunes" class="buy__pic">
+                    </a>
                 {% endfor %}
             </div>
         </div>

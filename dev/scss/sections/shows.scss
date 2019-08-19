@@ -2,15 +2,59 @@
     margin-top: rem(80px);
 }
 
+.shows__block {
+    height: 400px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.shows__triggers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+
+.shows__trigger {
+    //flex: 0 0 33%;
+    width: 100%;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    //border: 1px solid #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+    border-bottom: none;
+    transition: .3s;
+    &:hover {
+        background-color: #fff;
+        color: rgba(0, 0, 0, .5);
+    }
+    &--active {
+        background-color: #fff;
+        color: rgba(0, 0, 0, .5);
+    }
+}
+
 .shows__list {
+    position: absolute;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0 10%;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
+    transition: .3s;
     @include phones {
         padding: 0;
+    }
+    &--hidden {
+        display: none;
     }
 }
 

@@ -1,0 +1,52 @@
+.about__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.about__image {
+    flex: 0 0 40%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 5px solid rgba(244, 240, 241, .6);
+    max-height: 485px;
+    overflow: hidden;
+    @include laptops {
+        max-height: 435px;
+    }
+    @include tablets {
+        max-height: 500px;
+    }
+    @include phones {
+        margin-right: 0;
+        max-height: 380px;
+    }
+}
+
+.about__pic {
+    max-width: 100%;
+}
+
+.about__text {
+    color: #fff;
+    letter-spacing: 2px;
+    @include laptops {
+        margin-bottom: 10px;
+    }
+    &--mobile {
+        @include laptops {
+            display: none;
+        }
+    }
+}
+
+.about__mobile {
+    display: none;
+    letter-spacing: 2px;
+    @include laptops {
+        display: block;
+    }
+}

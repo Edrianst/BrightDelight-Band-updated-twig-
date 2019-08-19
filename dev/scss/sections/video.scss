@@ -59,3 +59,90 @@
         display: block;
     }
 }
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.video__item {
+    flex: 0 0 48%;
+    position: relative;
+    @include phones {
+        margin-bottom: 20px;
+    }
+}
+
+.video__post {
+    width: 100%;
+    height: 320px;
+    @include middle {
+        height: 265px;
+    }
+    @include tablets {
+        height: 180px;
+    }
+
+}
+
+.video__poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    text-decoration: none;
+    transition: .3s;
+    &:hover {
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+}
+
+.video__title {
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 3px;
+    @include phones {
+        font-size: 16px;
+    }
+}
+
+.poster__pic {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.video__icon {
+    color: #fff;
+    font-size: 44px;
+}
+
+.video__btn {
+    text-align: center;
+    margin-top: 40px;
+}

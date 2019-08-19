@@ -1,4 +1,4 @@
-<footer class="section footer">
+<footer class="section section--animated footer">
     <div class="container">
         <div class="section__title">
             <h2>{{ data.footerTitle }}</h2>
@@ -7,11 +7,11 @@
             <form action="mail.php" method="post" class="form__elem" id="form">
                 <div class="form__row">
                     <label for="name" class="input__title">{{ data.formInput }}</label>
-                    <input type="text" class="form__input" name="name" id="name">
+                    <input type="text" class="form__input" name="name" id="name" required>
                 </div>
                 <div class="form__row">
                     <label for="message" class="input__title">{{ data.formInputTwo }}</label>
-                    <textarea name="message" id="message" rows="7" class="form__input form__input--message"></textarea>
+                    <textarea name="message" id="message" rows="7" class="form__input form__input--message" required></textarea>
                 </div>
                 <button class="btn btn--form" type="submit" value="Отправить">{{ data.formBtn }}</button>
             </form>

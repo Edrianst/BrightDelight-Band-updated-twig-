@@ -1,86 +1,19 @@
 // scrolling
 
-$(document).ready(function () {
+const scroll = (link) => {
+    let id = link.getAttribute('href');
+    let top = $(id).offset().top;
 
-    $("#menu").on("click", "a", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({
-            scrollTop: top
-        }, 700);
-    });
-});
-
-// video 
-
-const frame = document.getElementById('frame');
-const video = document.getElementById('video');
-const btn = document.getElementById('play-btn');
-
-
-window.onload = function () {
-    document.getElementById('play-btn').onclick = function () {
-        video.style.display = 'none';
-        frame.style.display = 'block';
-        btn.style.display = 'none';
-        frame.src = 'https://www.youtube.com/embed/ng07h-xhx-w?autoplay=1';
-    }
+    $('body,html').animate({
+        scrollTop: top
+    }, 700);
 }
-
-//ham menu
-
-$(function () {
-    const menu = $('.ham__menu');
-
-    $('.hamburger').on('click', e => {
-        menu.toggleClass('ham__menu--active');
-        $('body').addClass('overflow');
-    })
-
-    $('.close-btn').on('click', e => {
-        e.preventDefault();
-        menu.removeClass('ham__menu--active');
-        $('body').removeClass('overflow');
-    })
-
-    $(".menu__list").on("click", "a", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-
-        menu.removeClass('ham__menu--active');
-        $('body').removeClass('overflow');
-        setTimeout(() => {
-            $('body,html').animate({
-                scrollTop: top
-            }, 700);
-        }, 500);
-    });
-})
-
-//gallery
-
-$(function () {
-    const link = $('.more');
-    const block = $('.gallery__block');
-
-    link.on('click', e => {
-        e.preventDefault();
-        block.removeClass('gallery__block--hidden');
-        link.css({
-            "display": "none"
-        })
-    })
-})
-
-
 
 const drawText = (strings) => {
     const text = document.querySelector('.preloader__text');
     let i = 0;
 
-     function recurse(index) {
+    function recurse(index) {
 
         const interval = setInterval(function () {
             text.innerHTML += strings[index][i];
@@ -104,40 +37,117 @@ const drawText = (strings) => {
     recurse(0);
 }
 
-drawText(['Загрузка ...', 'Loading ...']);
+const startVideo = () => {
+    let links = $('.video__link');
 
-$(window).on('load', function () {
+    links.on('click', e => {
+        e.preventDefault();
+
+        let trigger = $(e.currentTarget);
+        let poster = trigger.closest('.video__poster');
+        let frame = poster.next('.video__post');
+        let src = frame.attr('src');
+
+        poster.css({
+            'display': 'none'
+        })
+
+        frame.attr('src', src + '?autoplay=1');
+
+        console.log(frame.attr('src'));
+    })
+}
+
+const hamburger = () => {
+    const menu = $('.ham__menu');
+
+    $('.hamburger').on('click', e => {
+        menu.toggleClass('ham__menu--active');
+        $('body').addClass('overflow');
+    })
+
+    $('.close-btn').on('click', e => {
+        e.preventDefault();
+        menu.removeClass('ham__menu--active');
+        $('body').removeClass('overflow');
+    })
+
+    $(".menu__list").on("click", "a", function (event) {
+        event.preventDefault();
+
+        menu.removeClass('ham__menu--active');
+        $('body').removeClass('overflow');
+        setTimeout(() => {
+            scroll(event.currentTarget)
+        }, 500);
+    });
+}
+
+const animateHeader = () => {
+    setTimeout(() => {
+        $('.header').animate({
+            opacity: 1
+        }, 700);
+    }, 1100);
+    setTimeout(() => {
+        $('.btn--header').animate({
+            opacity: 1
+        }, 4000);
+    }, 1100);
+}
+
+const animateSections = () => {
+    $(window).scroll(function () {
+        let items = $('.section--animated');
+        let scroll = $(window).scrollTop();
+
+        for (var i = 0; i < items.length; i++) {
+            if ($('.section--animated:eq(' + i + ')').offset().top - scroll <= $(window).height() / 1.2) {
+                $('.section--animated:eq(' + i + ')').animate({
+                    opacity: 1,
+                }, 700);
+            }
+        }
+    })
+}
+
+
+const preload = () => {
     setTimeout(() => {
         $('.preloader').fadeOut(1000);
     }, 100);
+}
 
-})
+const selectTabs = () => {
+    let triggers = $('.shows__trigger');
+    let lists = $('.shows__list');
 
-$(function () {
-    $('.album__wrapper').on('click', e => {
+    triggers.on('click', e => {
         e.preventDefault();
-        let currentTrigger = $(e.currentTarget);
-        let modal = currentTrigger.next('.gallery__modal');
-        modal.css({
-            'display': 'flex'
-        })
-        setTimeout(() => {
-            modal.addClass('gallery__modal--active');
-            $('body').addClass('overflow');
-        }, 300);
+
+        let trigger = $(e.currentTarget);
+        const hash = trigger.attr('href');
+        triggers.removeClass('shows__trigger--active');
+        trigger.addClass('shows__trigger--active');
+        lists.addClass('shows__list--hidden');
+        $(hash).removeClass('shows__list--hidden');
+        console.log(hash);
     })
-    $(document).mouseup(function (e) {
-        let div = $('.gallery__wrapper');
-        let modalWindow = $('.gallery__modal--active');
-        if (!div.is(e.target) &&
-            div.has(e.target).length === 0) {
-            modalWindow.removeClass('gallery__modal--active');
-            $('body').removeClass('overflow')
-            setTimeout(() => {
-                modalWindow.css({
-                    'display': 'none'
-                })
-            }, 300);
-        }
-    });
+}
+
+$("body").on("click", ".anchor", e => {
+    e.preventDefault();
+
+    scroll(e.currentTarget);
+});
+
+drawText(['Loading ...', 'Загрузка ...']);
+
+$(() => {
+    preload();
+    animateHeader();
+    animateSections();
+    hamburger();
+    startVideo();
+    selectTabs();
 })
