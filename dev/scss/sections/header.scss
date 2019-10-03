@@ -248,14 +248,6 @@
     }
 }
 
-.social-btns--main {
-    margin-top: 20px;
-
-    .fa {
-        font-size: 30px;
-    }
-}
-
 .logo__big {
     position: absolute;
     top: 70px;
@@ -270,10 +262,8 @@
     min-height: 72vh;
 
     @include phones {
-        //min-height: 55vh;
-        //min-height: 60vh;
         background-position: 50% 0;
-        background-size: cover;
+        background-size: contain; //cover with the album
     }
 
 }

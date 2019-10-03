@@ -56,7 +56,6 @@
         transform: initial;
         background: none;
         margin: 20px auto;
-        margin-bottom: none;
     }
 
     &--modal {
@@ -272,6 +271,10 @@
     text-align: center;
     margin-top: 20px;
     min-height: 20px;
+}
+
+#hidden-form {
+    text-align: center;
 }
 
 @keyframes rotation {

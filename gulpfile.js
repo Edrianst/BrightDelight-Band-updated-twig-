@@ -86,7 +86,7 @@ gulp.task('twig', function () {
                     data: require(paths.dev + 'data/data_' + item + '.js'),
                     main: require(paths.dev + 'data/data.js'),
                     locales: locales,
-                    version: 'v=1.1.13'
+                    version: 'v=1.13.1313'
                 }
             }))
             .pipe(gulp.dest('dist/main/' + item))

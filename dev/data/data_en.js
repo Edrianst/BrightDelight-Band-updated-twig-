@@ -47,10 +47,10 @@ module.exports = {
     ],
     headerOrder: 'Listen Now',
     aboutTitle: 'Bio',
-    aboutText: 'BrightDelight is a 4 man Metalcore band from Russia. Melodic, sometimes lyrical samples, the contrast between clean and extreme vocals and solid sound of other instruments create an amazing mix, that we prefer to call Electronic core.<br>The band was formed in early 2017 by the drummer Stanislav and guitar player Yuri. As soon as we recorded and released our first EP "Let\'s make it real" the band focused on live shows taking part in several gigs in Moscow, Saint-Petersburg, Kaluga and an open-air festival "Dobrofest". After the long road on the worldwide international festival Emergenza, from qualifying stages up to the grand final in club "RED" (Moscow) BrightDelight was named one of the 30 best Russian bands in 2018. <br> After managing a couple of changes in the line-up, we achieved to share the stage with such bands as 7000$, Stigmata, 5diez, Illidiance and others. Certainly, the main event of spring is that BrightDelight have joined Russian 2019 Tour of ADEPT (Sweden) and Crystal Lake (Japan). In addition, we released a single "Checkmate" and shortly after that, our second, this time, LP "Invoke" in the run-up to the tour. This record took us to a complete higher level. We were warmly received in every city of the tour and got an amazing support of the crowd, that allowed us to develop the geography of our shows and get a mentionable growth of the amount of fans, who likes to say, that the most important part of our music is an incredible atmosphere and an inexhaustible energy of our live shows.',
+    aboutText: 'BrightDelight is a 5 man Metalcore band from Russia. Melodic, sometimes lyrical samples, the contrast between clean and extreme vocals and solid sound of other instruments create an amazing mix, that we prefer to call Electronic core.<br>The band was formed in early 2017 by the drummer Stanislav and guitar player Yuri. As soon as we recorded and released our first EP "Let\'s make it real" the band focused on live shows taking part in several gigs in Moscow, Saint-Petersburg, Kaluga and an open-air festival "Dobrofest". After the long road on the worldwide international festival Emergenza, from qualifying stages up to the grand final in club "RED" (Moscow) BrightDelight was named one of the 30 best Russian bands in 2018. <br> After managing a couple of changes in the line-up, we achieved to share the stage with such bands as 7000$, Stigmata, 5diez, Illidiance and others. Certainly, the main event of spring is that BrightDelight have joined Russian 2019 Tour of ADEPT (Sweden) and Crystal Lake (Japan). In addition, we released a single "Checkmate" and shortly after that, our second, this time, LP "Invoke" in the run-up to the tour. This record took us to a complete higher level. We were warmly received in every city of the tour and got an amazing support of the crowd, that allowed us to develop the geography of our shows and get a mentionable growth of the amount of fans, who likes to say, that the most important part of our music is an incredible atmosphere and an inexhaustible energy of our live shows.',
     aboutMobile: 'BrightDelight is a 4 man Metalcore band from Russia. Melodic, sometimes lyrical samples, the contrast between clean and extreme vocals and solid sound of other instruments create an amazing mix, that we prefer to call Electronic core.<br>The band was formed in early 2017 by the drummer Stanislav and guitar player Yuri. As soon as we recorded and released our first EP "Let\'s make it real" the band focused on live shows taking part in several gigs in Moscow, Saint-Petersburg, Kaluga and an open-air festival "Dobrofest". After the long road on the worldwide international festival Emergenza, from qualifying stages up to the grand final in club "RED" (Moscow) BrightDelight was named one of the 30 best Russian bands in 2018.',
     aboutMobile_2: 'After managing a couple of changes in the line-up, we achieved to share the stage with such bands as 7000$, Stigmata, 5diez, Illidiance and others. Certainly, the main event of spring is that BrightDelight have joined Russian 2019 Tour of ADEPT (Sweden) and Crystal Lake (Japan). In addition, we released a single "Checkmate" and shortly after that, our second, this time, LP "Invoke" in the run-up to the tour. This record took us to a complete higher level. We were warmly received in every city of the tour and got an amazing support of the crowd, that allowed us to develop the geography of our shows and get a mentionable growth of the amount of fans, who likes to say, that the most important part of our music is an incredible atmosphere and an inexhaustible energy of our live shows.',
-    aboutLineup: 'Line-up:<br><br>Alexandr Telganov – vocals, samples<br>Stanislav Nikitashin – drums,<br>Vitaliy Eremeev – guitars,<br>Denis Kirsanov – bass',
+    aboutLineup: 'Line-up:<br><br>Alexandr Telganov – vocals, samples,<br>Alexandr Arkhipkin - vocals,<br>Stanislav Nikitashin – drums,<br>Vitaliy Eremeev – guitars,<br>Denis Kirsanov – bass',
     showsTitle: 'Shows',
     showsTitle_upcoming: 'Upcoming events in 2019',
     shows: [
@@ -113,7 +113,7 @@ module.exports = {
         {
             link: 'https://vk.com/wildenergyfest',
             date: 'Oct 20',
-            event: 'Staion Hall',
+            event: 'Station Hall',
             city: 'Moscow',
             status: true,
             year: '2018'
@@ -219,6 +219,14 @@ module.exports = {
             date: 'Jul 12',
             event: 'Dobrofest',
             city: 'Yaroslavskaya obl.',
+            status: true,
+            year: '2019'
+        },
+        {
+            link: 'https://vk.com/msk_static_x_2019',
+            date: 'Sep 21',
+            event: 'Static X Support',
+            city: 'Moscow',
             status: true,
             year: '2019'
         },
