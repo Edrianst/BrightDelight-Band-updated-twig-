@@ -528,6 +528,24 @@ th {
   transform: none;
 }
 
+.btn--merch {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  position: initial;
+  bottom: initial;
+  left: initial;
+  -webkit-transform: initial;
+  -ms-transform: initial;
+  transform: initial;
+  margin: 20px auto;
+}
+
+.btn--merch:hover {
+  color: #000;
+  background-color: #fff;
+}
+
 .section__content {
   width: 100%;
   color: #fff;
@@ -602,7 +620,7 @@ th {
   -webkit-transition: .5s ease;
   -o-transition: .5s ease;
   transition: .5s ease;
-  z-index: 20;
+  z-index: 99999999999;
   background-color: #000;
   display: -webkit-box;
   display: -webkit-flex;
@@ -620,7 +638,7 @@ th {
 }
 
 .ham__menu--active {
-  height: 370px;
+  height: 450px;
 }
 
 .close-btn {
@@ -1155,6 +1173,11 @@ p {
   color: #000;
 }
 
+.hidden__message {
+  display: none;
+  text-align: center;
+}
+
 .gallery__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1380,7 +1403,7 @@ p {
 }
 
 .header__pic {
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .header__video {
@@ -1585,7 +1608,7 @@ p {
 }
 
 .header__main {
-  background: url("../img/invoke.jpg") no-repeat 50% 50%/contain, #000;
+  background: url("../img/break_free.jpg") no-repeat 50% 50%/contain, #000;
   margin: 0;
   min-height: 72vh;
 }
@@ -1615,6 +1638,131 @@ p {
 
 .main__link:hover {
   opacity: .8;
+}
+
+.video__instead {
+  max-width: 100%;
+  height: auto;
+}
+
+.merch__block {
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.merch__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 35px;
+  opacity: .7;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  z-index: 9999;
+}
+
+.merch__arrow--left {
+  left: 230px;
+}
+
+.merch__arrow--right {
+  right: 230px;
+}
+
+.merch__arrow:hover {
+  opacity: 1;
+}
+
+.merch__item {
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.merch__item .btn {
+  margin-top: auto;
+}
+
+.merch__image {
+  text-align: center;
+}
+
+.merch__pic {
+  max-width: 70%;
+  height: auto;
+}
+
+.merch__title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.merch__cost {
+  font-weight: 600;
+  color: #e60000;
+  margin-bottom: 10px;
+}
+
+.swiper-wrapper {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.merch__form {
+  display: none;
+  width: 40%;
+  padding: 30px 70px;
+}
+
+.nice-select {
+  line-height: initial;
+}
+
+.merch__input {
+  width: 100%;
+  margin-bottom: 15px;
+  background: none;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  height: 32px;
+}
+
+.merch__input:hover {
+  border: 2px solid black;
+}
+
+.form__merchelem {
+  text-align: center;
 }
 
 .promo {
@@ -2192,6 +2340,14 @@ p {
   .navigation {
     display: none;
   }
+
+  .merch__arrow--left {
+    left: 100px;
+  }
+
+  .merch__arrow--right {
+    right: 100px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2277,6 +2433,7 @@ p {
   .mobile__logo {
     display: block;
     text-align: center;
+    padding-top: 70px;
   }
 
   .header__video {
@@ -2289,6 +2446,10 @@ p {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .merch__form {
+    width: 70%;
   }
 
   .content__block {
@@ -2368,6 +2529,22 @@ p {
     background-position: 50% 0;
     -webkit-background-size: contain;
     background-size: contain;
+  }
+
+  .merch__arrow--left {
+    left: 40px;
+  }
+
+  .merch__arrow--right {
+    right: 40px;
+  }
+
+  .merch__pic {
+    max-width: 100%;
+  }
+
+  .merch__form {
+    width: 80%;
   }
 
   .promo__text {
