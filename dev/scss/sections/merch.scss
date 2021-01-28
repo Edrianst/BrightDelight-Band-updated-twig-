@@ -1,0 +1,116 @@
+.merch__block {
+    position: relative;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.merch__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 35px;
+    opacity: .7;
+    transition: .3s;
+    z-index: 9999;
+    &--left {
+        left: 230px;
+        @include laptops {
+            left: 100px;
+        }
+        @include phones {
+            left: 40px;
+        }
+    }
+    &--right {
+        right: 230px;
+        @include laptops {
+            right: 100px;
+        }
+        @include phones {
+            right: 40px;
+        }
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+.merch__item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    .btn {
+        margin-top: auto;
+    }
+}
+
+.merch__image {
+    text-align: center;
+}
+
+.merch__pic {
+    max-width: 70%;
+    height: auto;
+    @include phones {
+        max-width: 100%;
+    }
+}
+
+.merch__title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+.merch__cost {
+    font-weight: 600;
+    color: rgb(230, 0, 0);
+    margin-bottom: 10px;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.merch__form {
+    display: none;
+    width: 40%;
+    padding: 30px 70px;
+    @include tablets {
+        width: 70%;
+    }
+    @include phones {
+        width: 80%;
+    }
+}
+
+.nice-select {
+    line-height: initial;
+}
+
+.merch__input {
+    width: 100%;
+    margin-bottom: 15px;
+    background: none;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+    height: 32px;
+    &:hover {
+        border: 2px solid rgba(0, 0, 0, 1);
+    }
+}
+
+.form__merchelem {
+    text-align: center;
+}
+
+//.merch__title {
+//    color: #000;
+//    font-size: 18px;
+//    font-weight: 300;
+//}

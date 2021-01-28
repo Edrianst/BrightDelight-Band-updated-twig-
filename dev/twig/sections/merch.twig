@@ -1,0 +1,69 @@
+<section class="section section--animated merch" id="merch">
+    <div class="container">
+        <div class="section__content">
+            <div class="section__title">
+                <h2>{{ data.merchTitle }}</h2>
+            </div>
+            <div class="merch__block">
+                <div class="swiper-wrapper">
+                    {% for item in data.merch %}
+                        <div class="swiper-slide">
+                            <div class="merch__item">
+                                <div class="merch__image">
+                                    <img src="{{ item.image }}" alt="" class="merch__pic">
+                                </div>
+                                <div class="merch__title">{{ item.title }}</div>
+                                <div class="merch__cost">{{ item.cost }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a href="#" class="merch__arrow merch__arrow--left">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="merch__arrow merch__arrow--right">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a data-fancybox data-src="#hidden-merch" href="javascript:;" class="btn">{{ data.merchBtn }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="merch__form" id="hidden-merch">
+    <form action="../../store.php" method="post" class="form__merchelem" id="merch_form">
+        <div class="form__row">
+            <label for="merchtype" class="merch__label">{{ data.merchProduct }}</label>
+            <select class="merch__input" name="merchtype" id="merchtype" required>
+                <option value="футболка белая" selected>{{ data.merchType }}</option>
+                <option value="футболка черная">{{ data.merchType_1 }}</option>
+                <option value="браслет">{{ data.merchType_2 }}</option>
+            </select>
+        </div>
+        <div class="form__row">
+            <label for="merchsize" class="merch__label">{{ data.merchSize }}</label>
+            <select class="merch__input" name="merchsize" id="merchsize" required>
+                <option value="s" selected>{{ data.merchSize_1 }}</option>
+                <option value="m">{{ data.merchSize_2 }}</option>
+                <option value="l">{{ data.merchSize_3 }}</option>
+            </select>
+        </div>
+        <div class="form__row">
+            <label for="merchnumber" class="merch__label">{{ data.merchNumber }}</label>
+            <input type="number" class="merch__input" name="merchnumber" id="merchnumber" required>
+        </div>
+        <div class="form__row">
+            <label for="merchname" class="merch__label">{{ data.merchName }}</label>
+            <input type="text" class="merch__input" name="merchname" id="merchname" required>
+        </div>
+        <div class="form__row">
+            <label for="merchemail" class="merch__label">{{ data.merchEmail }}</label>
+            <input type="email" class="merch__input" name="merchemail" id="merchemail" required>
+        </div>
+        <div class="form__row">
+            <label for="merchphone" class="merch__label">{{ data.merchPhone }}</label>
+            <input type="phone" class="merch__input" name="merchphone" id="merchphone">
+        </div>
+        <button class="btn btn--merch" type="submit" value="Отправить">{{ data.formBtn }}</button>
+    </form>
+</div>

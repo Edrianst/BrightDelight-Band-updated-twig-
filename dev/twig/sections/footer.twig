@@ -4,7 +4,7 @@
             <h2>{{ data.footerTitle }}</h2>
         </div>
         <div class="form">
-            <form action="mail.php" method="post" class="form__elem" id="form">
+            <form action="../../mail.php" method="post" class="form__elem" id="form">
                 <div class="form__row">
                     <label for="name" class="input__title">{{ data.formInput }}</label>
                     <input type="text" class="form__input" name="name" id="name" required>
@@ -23,3 +23,13 @@
         </div>
     </div>
 </footer>
+
+<div class="hidden__message" id="hidden-message">
+    <div class="modal__text">{{ data.mailSuccess }}</div>
+    <a href="#" data-fancybox-close class="btn btn--merch btn--modal">{{ data.mailBtn }}</a>
+</div>
+
+<div class="hidden__message" id="hidden-message--negative">
+    <div class="modal__text">{{ data.mailFail }}</div>
+    <a href="#" data-fancybox-close class="btn btn--merch btn--modal">{{ data.mailBtn }}</a>
+</div>

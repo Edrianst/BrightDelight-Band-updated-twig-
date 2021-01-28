@@ -81,6 +81,20 @@
         top: initial;
         transform: none;
     }
+    &--merch {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+        position: initial;
+        bottom: initial;
+        left: initial;
+        transform: initial;
+        margin: 20px auto;
+        &:hover {
+            color: #000;
+            background-color: #fff;
+        }
+    }
 }
 
 .section__content {
@@ -148,14 +162,14 @@
     height: 0;
     overflow: hidden;
     transition: .5s ease;
-    z-index: 20;
+    z-index: 99999999999;
     background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &--active {
-        height: 370px;
+        height: 450px;
     }
 }
 

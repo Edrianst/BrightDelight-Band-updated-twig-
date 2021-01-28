@@ -143,6 +143,20 @@ $("body").on("click", ".anchor", e => {
 
 drawText(['Loading ...', 'Загрузка ...']);
 
+var swiper = new Swiper('.merch__block', {
+    grabCursor: false,
+    loop: true,
+    slidesPerView: 1,
+    speed: 1000,
+    autoplay: {
+        delay: 2000,
+    },
+    navigation: {
+        nextEl: '.merch__arrow--right',
+        prevEl: '.merch__arrow--left',
+    }
+});
+
 $(() => {
     preload();
     animateHeader();
@@ -150,4 +164,6 @@ $(() => {
     hamburger();
     startVideo();
     selectTabs();
+    $('select').niceSelect();
+    $('#merchphone').mask('+7(999) 999 99 99');
 })

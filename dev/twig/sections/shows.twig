@@ -6,11 +6,11 @@
             </div>
             <div class="shows__block">
                 <div class="shows__triggers">
-                    <a href="#upcoming" class="shows__trigger shows__trigger--active">Upcoming</a>
-                    <a href="#2019" class="shows__trigger">2019</a>
+                    <a href="#upcoming" class="shows__trigger">Upcoming</a>
+                    <a href="#2019" class="shows__trigger shows__trigger--active">2019</a>
                     <a href="#2018" class="shows__trigger">2018</a>
                 </div>
-                <div class="shows__list" id="upcoming">
+                <div class="shows__list shows__list--hidden" id="upcoming">
                     {% for item in data.shows %}
                         {% if item.status == false %}
                             <a href="{{ item.link }}" class="shows__link" target="_blank">
@@ -23,7 +23,7 @@
                         {% endif %}
                     {% endfor %}
                 </div>
-                <div class="shows__list shows__list--hidden" id="2019">
+                <div class="shows__list" id="2019">
                     {% for item in data.shows %}
                         {% if item.status == true %}
                             {% if item.year == '2019' %}

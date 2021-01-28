@@ -9,10 +9,10 @@ var submitForm = function (ev) {
         var mes = msg.mes,
             status = msg.status;
         if (status === 'OK') {
-            $.fancybox.open('<div id="hidden-form"><div class="modal__text">Ваше письмо было успешно отправлено</div><a href="#" data-fancybox-close class="btn btn--form btn--modal">Закрыть</a></div>');
+            $.fancybox.open($('#hidden-message'));
             console.log('1');
         } else {
-            $.fancybox.open('<div id="hidden-form"><div class="modal__text">К сожалению, письмо не было отправлено, попробуйте позже!</div><a href="#" data-fancybox-close class="btn btn--form btn--modal">Закрыть</a></div>');
+            $.fancybox.open($('#hidden-message--negative'));
             console.log('2');
         }
         $('#form')[0].reset();
@@ -21,10 +21,10 @@ var submitForm = function (ev) {
 
     request.fail(function (jqXHR, textStatus) {
         if(jqXHR.status == 200) {
-            $.fancybox.open('<div id="hidden-form"><div class="modal__text">Ваше письмо было успешно отправлено</div><a href="#" data-fancybox-close class="btn btn--form btn--modal">Закрыть</a></div>');
+            $.fancybox.open($('#hidden-message'));
             $('#form')[0].reset();
         } else {
-            $.fancybox.open('<div id="hidden-form"><div class="modal__text">К сожалению, письмо не было отправлено, попробуйте позже!</div><a href="#" data-fancybox-close class="btn btn--form btn--modal">Закрыть</a></div>');
+            $.fancybox.open($('#hidden-message--negative'));
         }
         console.log(jqXHR);
     });
@@ -45,3 +45,4 @@ var ajaxForm = function (form) {
 }
 
 $('#form').on('submit', submitForm);
+$('#merch_form').on('submit', submitForm);
